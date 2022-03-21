@@ -1,5 +1,10 @@
 // Assignment code here
 function generatePassword() {
+  var length = '';
+  while( length < 8 || length > 128) {
+    length = prompt('Enter the password length (must be between 8 and 128)');
+  }
+
   return 'hello';
 }
 
