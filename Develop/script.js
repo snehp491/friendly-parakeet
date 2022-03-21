@@ -5,6 +5,30 @@ function generatePassword() {
     length = prompt('Enter the password length (must be between 8 and 128)');
   }
 
+  var includeLowercase = '';
+  while(includeLowercase !== 'y' && includeLowercase !== 'Y' &&
+        includeLowercase !== 'n' && includeLowercase !== 'N') {
+    includeLowercase = prompt('Should the pasword include lowercase characters? (y/n)');
+  }
+
+  var includeUppercase = '';
+  while(includeUppercase !== 'y' && includeUppercase !== 'Y' &&
+  includeUppercase !== 'n' && includeUppercase !== 'N') {
+    includeUppercase = prompt('Should the pasword include uppercase characters? (y/n)');
+  }
+
+  var includeNumbers = '';
+  while(includeNumbers !== 'y' && includeNumbers !== 'Y' &&
+  includeNumbers !== 'n' && includeNumbers !== 'N') {
+    includeNumbers = prompt('Should the pasword include numbers? (y/n)');
+  }
+
+  var includeSpecial = '';
+  while(includeSpecial !== 'y' && includeSpecial !== 'Y' &&
+  includeSpecial !== 'n' && includeSpecial !== 'N') {
+    includeSpecial = prompt('Should the pasword include special characters? (y/n)');
+  }
+
   return 'hello';
 }
 
