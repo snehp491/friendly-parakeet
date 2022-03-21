@@ -47,7 +47,20 @@ function generatePassword() {
     eligibleCharacters += ' !"#$%&\'()*+,-./:;<=>?@[\]^_`{|}~';
   }
 
-  return eligibleCharacters;
+  if (eligibleCharacters === '') {
+    return 'No eligible criteria selected';
+  }
+
+  var password = '';
+
+  var lastIndex = eligibleCharacters.length - 1;
+  for (var i = 0; i < length; i++) {
+    var index = lastIndex * Math.random();
+    index = Math.round(index);
+    password += eligibleCharacters[index];
+  }
+
+  return password;
 }
 
 // Get references to the #generate element
