@@ -29,7 +29,25 @@ function generatePassword() {
     includeSpecial = prompt('Should the pasword include special characters? (y/n)');
   }
 
-  return 'hello';
+  var eligibleCharacters = '';
+  
+  if (includeLowercase === 'y' || includeLowercase === 'Y') {
+    eligibleCharacters += 'abcdefghijklmnopqrstuvwxyz';
+  }
+
+  if (includeUppercase === 'y' || includeUppercase === 'Y') {
+    eligibleCharacters += 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+  }
+
+  if (includeNumbers === 'y' || includeNumbers === 'Y') {
+    eligibleCharacters += '0123456789';
+  }
+
+  if (includeSpecial === 'y' || includeSpecial === 'Y') {
+    eligibleCharacters += ' !"#$%&\'()*+,-./:;<=>?@[\]^_`{|}~';
+  }
+
+  return eligibleCharacters;
 }
 
 // Get references to the #generate element
